@@ -1,5 +1,10 @@
 body {
    background: white;
+   display: flex;
+   flex-direction: column;
+   padding: 0;
+   justify-content: space-between;
+   height: 100vh;
 }
 
 .column {
@@ -58,4 +63,23 @@ body {
     color: white;
     border: none;
     height: 40px;
+}
+
+.light-grey {
+    background: #868686;
+    color: white;
+    height: 15vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.dark-grey {
+    background: black;
+    color: white;
+    height: 10vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
 }
