@@ -1,4 +1,3 @@
-
 {% load static %}
 <!DOCTYPE html>
 
@@ -11,7 +10,16 @@
     <link rel="stylesheet" href="{% static '/css/styles.css' %}">
 </head>
 <body>
-    {% block content %}
-    {% endblock %}
+    <nav>
+        {% block nav %}
+            <nav>Hi</nav>
+        {% endblock nav %}
+    </nav>
+
+    <div>
+        {% block content %}
+        {% endblock content %}
+    </div>
+
 </body>
 </html>
