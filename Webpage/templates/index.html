@@ -1,1 +1,40 @@
-<h1>Hello World</h1>
+{% extends 'base.html'%}
+
+
+{% block content %}
+<div class="column">
+    {% for card in cards %}
+    <div class="container">
+        <div class="card" style="width: 18rem;">
+            <div class="card-body">
+                <h5 class="card-title">{{card.title}}</h5>
+                <div class="subtitle-container">
+                    <h6 class="card-subtitle mb-2 text-muted">{{card.term_length}} Month Term</h6>
+                    <h6 class="card-subtitle mb-2 text-muted">Rate</h6>
+                </div>
+                <div class="content-container">
+                    <div class="text-container">
+                        <p class="card-text">{{card.description}}</p>
+                    </div>
+                    <div class="text-container">
+                        <p class="card-text">{{card.rate}}&#8373 per kWh</p>
+                        {% if card.title == 'Power of Credit'%}
+                        <h6>for 1000 kWh</h6>
+                        {% else %}
+                        <h6>+ $4.95 per month</h6>
+                        {% endif %}
+                    </div>
+
+                </div>
+
+                <a href="#" class="card-link">Card link</a>
+                <a href="#" class="card-link">Another link</a>
+                <a href="#" class="card-link">Another link</a>
+            </div>
+        </div>
+    </div>
+    {% endfor %}
+</div>
+
+
+{% endblock %}
